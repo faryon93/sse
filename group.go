@@ -81,10 +81,6 @@ func (g *Group) Finish() {
 	delete(g.broker.clients, g.name)
 }
 
-func (g *Group) Finish() {
-
-}
-
 func (g *Group) Handle(rw http.ResponseWriter, req *http.Request) {
 	// is streaming even possible?
 	flusher, ok := rw.(http.Flusher)
